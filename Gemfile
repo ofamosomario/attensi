@@ -49,8 +49,6 @@ group :development, :test do
 
   gem 'rspec'
 
-  gem 'rspec-rails'
-
   # CLEANER
   gem 'database_cleaner-active_record'
 
@@ -60,6 +58,8 @@ group :development, :test do
   # FAKER
   gem 'faker'
 end
+
+gem 'rspec-rails'
 
 group :development do
   gem 'listen', '~> 3.3'
