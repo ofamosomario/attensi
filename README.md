@@ -1,24 +1,31 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> *Project status:* completed </br>
+> *:busts_in_silhouette: Author:* Mário Augusto Carvalho Lara Leite </br>
+> *:email: Email:* tkyakow@gmail.com  </br>
+> :date: *Year:* 2021
 
-Things you may want to cover:
+# Case:
+**Create JSON REST-API for a service backed by a persistent SQL-database.**
 
-* Ruby version
+# Versions:
+> Ruby: 2.7.2p137 (2020-10-01 revision 5445e04352) [x86_64-linux]
 
-* System dependencies
+> Rails: Rails 6.1.2.1
 
-* Configuration
+# Database:
+> PostegreSQL
 
-* Database creation
+# Executing the app:
+> Go to repository ([https://github.com/ofamosomario/attensi](https://github.com/ofamosomario/attensi) and clone the project.
 
-* Database initialization
+> rake db:create db:migrate db:seed
 
-* How to run the test suite
+> rails s to execute the rails.
 
-* Services (job queues, cache servers, search engines, etc.)
+# Swagger (end-points documentation)
+> 
 
-* Deployment instructions
+# Tests
+> Run in terminal: rspec
 
-* ...
+**Thank you!**
