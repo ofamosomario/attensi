@@ -19,7 +19,7 @@ class User < ApplicationRecord
   validates :email, length: { minimum: 5, maximum: 70 }, format: { with: URI::MailTo::EMAIL_REGEXP }
 
   # SCOPE
-  scope :verify_user, -> { where(role: 'student') }
+  scope :not_admin, -> { where(role: 'student') }
 
   # CUSTOM METHODS
   class << self
