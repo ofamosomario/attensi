@@ -28,7 +28,7 @@ class User < ApplicationRecord
       select('users.id , users.first_name , users.last_name , sum(scores.score_value) as score_total,
         sum(scores.time_spent) as time_spent_total')
         .joins(:scores)
-        .where(scores: { created_at: (first_day..last_day) })
+        .where(scores: { started_playing: (first_day..last_day) })
         .order('score_total desc, time_spent_total desc')
         .group('users.id ')
     end
