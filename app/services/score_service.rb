@@ -15,11 +15,11 @@ class ScoreService
       first_day = period.first
       last_day = period.last
 
-      User.not_admin.scores_by_period first_day, last_day
+      User.verify_user.scores_by_period first_day, last_day
     end
 
     def best_worst_rated_user
-      User.not_admin.first_score_list + User.not_admin.last_score_list
+      User.verify_user.first_score_list + User.verify_user.last_score_list
     end
   end
 end
