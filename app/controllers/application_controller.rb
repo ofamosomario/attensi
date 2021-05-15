@@ -1,5 +1,4 @@
-class ApplicationController < ActionController::Base
+# frozen_string_literal: true
 
-  skip_before_action :verify_authenticity_token
-  
+class ApplicationController < ActionController::API
 end

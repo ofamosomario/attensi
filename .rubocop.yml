@@ -1,0 +1,47 @@
+AllCops:
+  Excludes:
+    - Gemfile
+    - bin/rails
+    - bin/spring
+    - bin/bundle
+    - bin/rake
+    - bin/setup
+    - config.ru
+    - db/schema.rb
+    - db/migrate/*
+    - config/boot.rb
+    - config/puma.rb
+    - config/application.rb
+    - config/environments/test.rb
+    - config/environments/production.rb
+    - config/initializers/filter_parameter_logging.rb
+    - config/initializers/rswag-ui.rb
+    - config/initializers/rswag_api.rb
+    - config/initializers/backtrace_silencers.rb
+    - config/initializers/devise.rb
+    - app/jobs/application_job.rb
+    - config/initializers/inflections.rb
+    - config/environments/development.rb
+    - config/initializers/cors.rb
+    - Rakefile
+Naming/MethodName:
+  Enabled: true
+  EnforcedStyle: snake_case
+  Exclude:
+    - 'test/**/**'
+Naming/VariableName:
+  Enabled: true
+Style/Documentation:
+  Enabled: false
+Style/ClassAndModuleChildren:
+  Enabled: false
+Lint/PercentSymbolArray:
+  Enabled: false
+Style/SymbolArray:
+  Enabled: false
+Layout/EmptyLinesAroundAccessModifier:
+  Enabled: false
+Layout/EmptyLineAfterGuardClause:
+  Enabled: false
+Metrics/BlockLength:
+  IgnoredMethods: ['describe', 'context']

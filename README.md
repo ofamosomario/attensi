@@ -23,7 +23,7 @@
 > rails s to execute the rails.
 
 # Swagger (end-points documentation)
-> 
+> [https://attensi.herokuapp.com/api-docs/i](https://attensi.herokuapp.com/api-docs/i) 
 
 # Tests
 > Run in terminal: rspec

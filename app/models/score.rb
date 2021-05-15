@@ -1,11 +1,11 @@
-class Score < ApplicationRecord
+# frozen_string_literal: true
 
+class Score < ApplicationRecord
   # RELATIONSHIP - MODEL
   belongs_to :user
 
   # MODEL VALIDATES
-  validates_presence_of :started_playing, :score, :time_spent, :user_id
+  validates_presence_of :started_playing, :score_value, :time_spent, :user_id
   validates :started_playing, date: true
-  validates_numericality_of :score
-
+  validates_numericality_of :score_value
 end

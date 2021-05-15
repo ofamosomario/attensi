@@ -1,4 +1,6 @@
-class Api::V1::ScoresController < ApplicationController
+# frozen_string_literal: true
+
+class Api::V1::ScoresController < ApiController
   before_action :set_score, only: [:show, :update, :destroy]
 
   # GET /scores
@@ -18,7 +20,7 @@ class Api::V1::ScoresController < ApplicationController
     @score = Score.new(score_params)
 
     if @score.save
-      render json: @score, status: :created
+      render json: { status: :created }
     else
       render json: @score.errors, status: :unprocessable_entity
     end
@@ -27,7 +29,7 @@ class Api::V1::ScoresController < ApplicationController
   # PATCH/PUT /scores/1
   def update
     if @score.update(score_params)
-      render json: @score
+      render json: { status: :updated }
     else
       render json: @score.errors, status: :unprocessable_entity
     end
@@ -39,13 +41,12 @@ class Api::V1::ScoresController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_score
-      @score = Score.find(params[:id])
-    end
+  def set_score
+    @score = Score.find(params[:id])
+  end
 
-    # Only allow a list of trusted parameters through.
-    def score_params
-      params.require(:score).permit(:user_id, :started_playing, :score, :time_spent)
-    end
+  # Only allow a list of trusted parameters through.
+  def score_params
+    params.require(:score).permit(:user_id, :started_playing, :score_value, :time_spent)
+  end
 end

@@ -38,10 +38,13 @@ gem 'active_model_serializers', '~> 0.10.0'
 gem 'rswag'
 
 # Figrarooooooooooo figaroo
-gem "figaro"
+gem 'figaro'
 
 # DateTime Validator
 gem 'date_validator'
+
+# RuboCop!
+gem 'rubocop', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
