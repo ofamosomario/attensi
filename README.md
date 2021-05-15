@@ -23,9 +23,15 @@
 > rails s to execute the rails.
 
 # Swagger (end-points documentation)
-> [https://attensi.herokuapp.com/api-docs/i](https://attensi.herokuapp.com/api-docs/i) 
+> [https://attensi.herokuapp.com/api-docs/i](https://attensi.herokuapp.com/api-docs/i)
 
 # Tests
 > Run in terminal: rspec
+
+# RuboCop
+
+![enter image description here](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvMSFQaCKg10EWCRxKz6sQWiTpHbiMdqjbGA&usqp=CAU)
+
+> Run in terminal: rubocop
 
 **Thank you!**
