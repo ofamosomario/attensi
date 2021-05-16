@@ -29,7 +29,7 @@ class User < ApplicationRecord
     include ScoreConstants
     def scores_by_period(first_day, last_day)
       select('users.id , users.first_name , users.last_name , sum(scores.score_value) as score_total,
-        sum(scores.time_spent) as time_spent_total')
+        sum(scores.time_spent) as time_spent_total, count(scores.id) as total_played')
         .joins(:scores)
         .where(scores: { started_playing: (first_day..last_day) })
         .order('score_total desc, time_spent_total desc')
@@ -38,7 +38,7 @@ class User < ApplicationRecord
 
     def first_score_list
       select('users.id , users.first_name , users.last_name , sum(scores.score_value) as score_total,
-        sum(scores.time_spent) as time_spent_total')
+        sum(scores.time_spent) as time_spent_total, count(scores.id) as total_played')
         .joins(:scores)
         .order('score_total desc, time_spent_total desc')
         .group('users.id ').limit(LIMIT_USER_BY_ONE)
@@ -46,7 +46,7 @@ class User < ApplicationRecord
 
     def last_score_list
       select('users.id , users.first_name , users.last_name , sum(scores.score_value) as score_total,
-        sum(scores.time_spent) as time_spent_total')
+        sum(scores.time_spent) as time_spent_total, count(scores.id) as total_played')
         .joins(:scores)
         .order('score_total asc, time_spent_total asc')
         .group('users.id ').limit(LIMIT_USER_BY_ONE)
