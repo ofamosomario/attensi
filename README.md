@@ -30,8 +30,10 @@
 
 # RuboCop
 
-![enter image description here](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvMSFQaCKg10EWCRxKz6sQWiTpHbiMdqjbGA&usqp=CAU)
+![RUBOCOP!](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvMSFQaCKg10EWCRxKz6sQWiTpHbiMdqjbGA&usqp=CAU)
 
 > Run in terminal: rubocop
+
+![RUBOCOP-RSPEC](https://coins.ippo.space/97cb9e51-f48d-43eb-8f8a-d676ee77d2ca.jpg)
 
 **Thank you!**
