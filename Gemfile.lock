@@ -67,6 +67,7 @@ GEM
       zeitwerk (~> 2.3)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
+    api-pagination (4.8.2)
     ast (2.4.2)
     bcrypt (3.1.16)
     bootsnap (1.7.5)
@@ -123,6 +124,18 @@ GEM
       addressable (>= 2.4)
     jsonapi-renderer (0.2.2)
     jwt (2.2.3)
+    kaminari (1.2.1)
+      activesupport (>= 4.1.0)
+      kaminari-actionview (= 1.2.1)
+      kaminari-activerecord (= 1.2.1)
+      kaminari-core (= 1.2.1)
+    kaminari-actionview (1.2.1)
+      actionview
+      kaminari-core (= 1.2.1)
+    kaminari-activerecord (1.2.1)
+      activerecord
+      kaminari-core (= 1.2.1)
+    kaminari-core (1.2.1)
     listen (3.5.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -266,6 +279,7 @@ PLATFORMS
 
 DEPENDENCIES
   active_model_serializers (~> 0.10.0)
+  api-pagination
   bootsnap (>= 1.4.4)
   byebug
   database_cleaner-active_record
@@ -275,6 +289,7 @@ DEPENDENCIES
   factory_bot_rails
   faker
   figaro
+  kaminari
   listen (~> 3.3)
   pg (~> 1.1)
   puma (~> 5.0)

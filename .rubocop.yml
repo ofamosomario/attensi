@@ -45,3 +45,5 @@ Layout/EmptyLineAfterGuardClause:
   Enabled: false
 Metrics/BlockLength:
   IgnoredMethods: ['describe', 'context']
+Layout/LineLength:
+  Max: 150

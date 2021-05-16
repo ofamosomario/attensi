@@ -46,6 +46,12 @@ gem 'date_validator'
 # RuboCop!
 gem 'rubocop', require: false
 
+# Kaminari
+gem 'kaminari'
+
+# Api-Pagination
+gem 'api-pagination'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

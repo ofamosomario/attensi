@@ -4,6 +4,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  # KAMINARI
+  paginates_per 10
+
   # RELATIONSHIP - MAP
   has_many :scores
 

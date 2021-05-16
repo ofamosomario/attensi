@@ -7,7 +7,7 @@ class RegistrationsController < Devise::RegistrationsController
     if @user.save
       render json: @user_serialized
     else
-      render json: { errors: @user.errors }
+      render json: { errors: @user.errors }, status: :unprocessable_entity
     end
   end
 

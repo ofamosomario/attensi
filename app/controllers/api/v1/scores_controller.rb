@@ -5,7 +5,9 @@ class Api::V1::ScoresController < ApiController
 
   # GET /scores
   def index
-    @scores = Score.all
+    page_number = params[:page].try(:[], :number)
+    per_page = params[:page].try(:[], :size)
+    @scores = Score.all.page(page_number).per(per_page)
 
     render json: @scores
   end

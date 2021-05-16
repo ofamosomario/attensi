@@ -21,7 +21,7 @@ RSpec.describe User, type: :model do
     end
 
     it 'unique email in an user' do
-      user = User.create(
+      User.create(
         first_name: 'Mario',
         last_name: 'Leite',
         email: 'mario@gmail.com',
@@ -33,9 +33,8 @@ RSpec.describe User, type: :model do
         email: 'mario@gmail.com',
         password: '123123'
       )
-      user.valid?
       user2.valid?
-      expect(user.errors[:email]).to include('has already been taken')
+      expect(user2.errors[:email]).to include('has already been taken')
     end
 
     it 'validate a valid eMail for user' do

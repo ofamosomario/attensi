@@ -8,6 +8,6 @@ class ScoreSerializer < ActiveModel::Serializer
   end
 
   def started_playing
-    Time.at(object.started_playing.to_i).utc.strftime('%Y-%m-%d')
+    object.started_playing.to_time.iso8601
   end
 end
