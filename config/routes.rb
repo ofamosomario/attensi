@@ -14,8 +14,8 @@ Rails.application.routes.draw do
         collection do
           # SCORE
           resources :scores
-          get '/top-users/:week_number', to: 'users#top_users', as: :users_by_week_number
-          get '/best-worst-rated-user', to: 'users#best_worst_rated_user', as: :best_worst_users
+          get '/top/:week_number', to: 'users#top_users', as: :users_by_week_number
+          get '/bestRated', to: 'users#best_worst_rated_user', as: :best_worst_users
         end
       end
     end

@@ -64,7 +64,7 @@ paths:
               - password
       responses:
         '200':
-          description: token are returned.
+          description: token is returned.
   /api/v1/users/scores:
     get:
       parameters:
@@ -196,7 +196,7 @@ paths:
       responses:
         '200':
           description: score deleted
-  /api/v1/users/top-users/{week_number}:
+  /api/v1/users/top/{week_number}:
     get:
       summary: Show a rank with users by week number ordened
       tags:
@@ -217,7 +217,7 @@ paths:
       responses:
         '200':
           description: OK
-  /api/v1/users/best-worst-rated-user:
+  /api/v1/users/bestRated:
     get:
       summary: Show a rank with best and worst user rated
       tags:
